@@ -1,0 +1,51 @@
+{
+  "manifest": {
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "helene-test",
+          "sourceDir": "lambda\\eu-central-1_helene-test"
+        },
+        "interfaces": [
+          {
+            "type": "RENDER_TEMPLATE",
+            "minimumTemplateVersion": "1.0"
+          }
+        ]
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "locales": {
+        "de-DE": {}
+      },
+      "allowsPurchases": false,
+      "usesPersonalInfo": false,
+      "isChildDirected": false,
+      "isExportCompliant": true,
+      "containsAds": false
+    },
+    "publishingInformation": {
+      "locales": {
+        "de-DE": {
+          "name": "Helene Test",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/e5c2/778cd8efcfbc4ffdb59e7382903ed19e/APP_ICON?versionId=vG.dVWhVPpjy.r4UyxL439uZ0donlywl&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20200308T190242Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86399&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20200308%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=d1b2d4447923d372362983db3adee75602781c42e22f81cc3a854c51e8edc331",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/61e5/58ecf314d03941e78d0c70b2288ecae2/APP_ICON_LARGE?versionId=PRVgQN.jet3JpEAMwrXqVUyDPeh6v_O6&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20200308T190242Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20200308%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=139ad90dda55d4ccfb883c78e0af329b8dcb6c0f094a1137d93f8b6d95e65963",
+          "summary": "Ein Skill zum Testen der UX von Audio in Kombination mit visuellem Feedback.",
+          "description": "Drei Testfälle sind verfügbar. Timer setzen, Tisch reservieren & Hotel buchen.",
+          "examplePhrases": [
+            "Alexa, öffne Helene Test."
+          ],
+          "keywords": []
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Test.",
+      "category": "EDUCATION_AND_REFERENCE",
+      "distributionCountries": [],
+      "automaticDistribution": {
+        "isActive": false
+      }
+    }
+  }
+}

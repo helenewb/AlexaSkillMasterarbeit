@@ -1,0 +1,483 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "helene test",
+      "intents": [
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "SetTimer",
+          "slots": [
+            {
+              "name": "duration",
+              "type": "AMAZON.DURATION"
+            }
+          ],
+          "samples": [
+            "timer auf {duration} stellen",
+            "timer auf {duration}",
+            "timer stellen {duration}",
+            "timer einstellen",
+            "stelle den timer auf {duration}",
+            "stelle den timer"
+          ]
+        },
+        {
+          "name": "TableReservation",
+          "slots": [
+            {
+              "name": "restaurant",
+              "type": "Restaurant",
+              "samples": [
+                "{restaurant} bitte",
+                "bitte für {restaurant}",
+                "ich möchte ins {restaurant}",
+                "wir möchten ins {restaurant}",
+                "{restaurant}"
+              ]
+            },
+            {
+              "name": "guests",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "wir sind {guests} Personen",
+                "bitte für {guests}",
+                "für {guests} bitte",
+                "{guests}"
+              ]
+            },
+            {
+              "name": "time",
+              "type": "AMAZON.TIME",
+              "samples": [
+                "heute Abend {time}",
+                "um {time}",
+                "um {time} bitte",
+                "bitte um {time}",
+                "{time}"
+              ]
+            }
+          ],
+          "samples": [
+            "Restaurant buchen",
+            "buche einen Tisch im {restaurant}",
+            "ich möchte einen Tisch reservieren",
+            "Tischreservierung",
+            "Tisch reservieren",
+            "ich möchte eine Reservierung für {guests}",
+            "ich möchte eine Reservierung im {restaurant} um {time} für {guests}",
+            "ich möchte eine Reservierung im {restaurant}",
+            "Tischreservierung für {guests} um {time} im {restaurant}",
+            "Tischreservierung {restaurant}",
+            "reserviere einen Tisch im {restaurant}",
+            "reserviere einen Tisch für {guests} Personen im {restaurant}",
+            "reserviere einen Tisch für heute Abend {time} für {guests} Personen",
+            "reserviere einen Tisch für heute Abend {time}",
+            "reserviere einen Tisch"
+          ]
+        },
+        {
+          "name": "HotelSearch",
+          "slots": [
+            {
+              "name": "location",
+              "type": "Location",
+              "samples": [
+                "ich will nach {location}",
+                "ich muss nach {location}",
+                "ich möchte nach {location}",
+                "{location} bitte",
+                "suche bitte in {location}",
+                "ich suche in {location}",
+                "bitte in {location}",
+                "{location}"
+              ]
+            },
+            {
+              "name": "guests",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{guests}",
+                "{guests} Personen",
+                "{guests} Person"
+              ]
+            },
+            {
+              "name": "date",
+              "type": "AMAZON.DATE",
+              "samples": [
+                "ich reise {date}",
+                "ich suche für {date}",
+                "ich reise {date} an",
+                "Anreise am {date}",
+                "ich möchte {date} anreisen",
+                "ich möchte {date} übernachten",
+                "{date}",
+                "für {date}"
+              ]
+            }
+          ],
+          "samples": [
+            "buche ein Hotelzimmer in {location}",
+            "reserviere ein Hotelzimmer in {location}",
+            "reserviere ein Hotel in {location}",
+            "Hotel reservieren",
+            "buche {date} ein Hotelzimmer in {location}",
+            "buche {date} ein Hotelzimmer",
+            "buche ein Hotel in {location} für {guests} Personen",
+            "buche ein Hotel in {location}",
+            "ich brauche ein Hotel für {guests} Person in {location}",
+            "ich brauche ein Hotel für {date} in {location}",
+            "ich brauche ein Hotel in {location}",
+            "suche ein Hotel für {date} in {location} für {guests} Person",
+            "suche ein Hotelzimmer für {date} in {location}",
+            "suche ein Hotelzimmer in {location} für {guests} Personen {date} ",
+            "suche ein Hotelzimmer in {location} für {guests} Person",
+            "suche ein Hotelzimmer in {location}",
+            "Hotelzimmer suchen",
+            "Hotelzimmer buchen",
+            "Hotel buchen",
+            "Hotelsuche",
+            "ich suche ein Hotel",
+            " buche ein Hotel für {guests} Personen {date} in {location}"
+          ]
+        },
+        {
+          "name": "BookHotel",
+          "slots": [
+            {
+              "name": "number",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "hotel",
+              "type": "Hotel"
+            }
+          ],
+          "samples": [
+            "ich möchte Hotel {number} buchen",
+            "ich möchte Hotel {hotel} buchen",
+            "buche Hotel {hotel}",
+            "buche Hotel {number}"
+          ]
+        },
+        {
+          "name": "HotelDetail",
+          "slots": [
+            {
+              "name": "number",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "hotel",
+              "type": "Hotel"
+            }
+          ],
+          "samples": [
+            "ich möchte mehr über Nummer {number} erfahren",
+            "ich möchte mehr über {hotel} erfahren",
+            "erzähle mir mehr über {hotel}",
+            "erzähle mir mehr über {number}",
+            "erzähle mir über {hotel}",
+            "Hotel {hotel}",
+            "Hotel {number}",
+            "{hotel}",
+            "{number}",
+            "Details zu {number}",
+            "Details zu {hotel}",
+            "ich möchte Hotel {hotel}",
+            "Nummer {number} bitte",
+            "Nummer {number}"
+          ]
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.MoreIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateSettingsIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NextIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PageUpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PageDownIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PreviousIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollRightIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollDownIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollLeftIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollUpIntent",
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Restaurant Alpin",
+                "synonyms": [
+                  "Gasthof Alpin",
+                  "Alpin"
+                ]
+              }
+            }
+          ],
+          "name": "Restaurant"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Wien",
+                "synonyms": [
+                  "Wien Hauptbahnhof",
+                  "Wien am Bahnhof",
+                  "Bahnhof Wien",
+                  "Hauptbahnhof Wien",
+                  "Wien beim Hauptbahnhof",
+                  "Wien nähe Hauptbahnhof"
+                ]
+              }
+            }
+          ],
+          "name": "Location"
+        },
+        {
+          "values": [
+            {
+              "id": "H_ALTWIEN",
+              "name": {
+                "value": "Hotel Alt Wien",
+                "synonyms": [
+                  "Alt Wien"
+                ]
+              }
+            },
+            {
+              "id": "H_POST",
+              "name": {
+                "value": "Hotel zur Post",
+                "synonyms": [
+                  "zur Post"
+                ]
+              }
+            },
+            {
+              "id": "H_ZENTRAL",
+              "name": {
+                "value": "Hotel Zentral",
+                "synonyms": [
+                  "Zentral"
+                ]
+              }
+            }
+          ],
+          "name": "Hotel"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "SetTimer",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "duration",
+              "type": "AMAZON.DURATION",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.248387524265.730128757460"
+              }
+            }
+          ]
+        },
+        {
+          "name": "TableReservation",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "restaurant",
+              "type": "Restaurant",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.557101195604.274413610577"
+              }
+            },
+            {
+              "name": "guests",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.694681195741.376798671470"
+              }
+            },
+            {
+              "name": "time",
+              "type": "AMAZON.TIME",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.694681195741.1571361989454"
+              }
+            }
+          ]
+        },
+        {
+          "name": "HotelSearch",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "location",
+              "type": "Location",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.337756328293.476738840879"
+              }
+            },
+            {
+              "name": "guests",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.337756328293.736461858774"
+              }
+            },
+            {
+              "name": "date",
+              "type": "AMAZON.DATE",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.337756328293.1232018227293"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.248387524265.730128757460",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Kein Problem. Für welche Dauer?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.557101195604.274413610577",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "In welchem Restaurant?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.694681195741.1571361989454",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Um wie viel Uhr?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.694681195741.376798671470",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Wie viele Personen?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.337756328293.476738840879",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "An welchem Ort soll ich suchen?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.337756328293.736461858774",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Wie viele Personen?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.337756328293.1232018227293",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Für welchen Tag?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "8"
+}
