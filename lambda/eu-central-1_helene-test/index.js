@@ -343,7 +343,7 @@ const CancelAndStopIntentHandler = {
                 || Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.StopIntent');
     },
     handle(handlerInput) {
-        return clearSession(handlerInput).responseBuilder.getResponse();
+        return clearSession(handlerInput).responseBuilder.speak(handlerInput.t('STOP')).withShouldEndSession(true).getResponse();
     }
 };
 
@@ -403,8 +403,8 @@ exports.handler = Alexa.SkillBuilders.custom()
         CancelAndStopIntentHandler,
         FallbackIntentHandler,
         SessionEndedRequestHandler,)
-    .addErrorHandlers(
-        ErrorHandler)
+    // .addErrorHandlers(
+    //     ErrorHandler)
     .addRequestInterceptors(
         LocalisationRequestInterceptor)
     .lambda();
